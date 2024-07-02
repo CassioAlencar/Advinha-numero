@@ -4,16 +4,16 @@ let numeroSecreto, chute, tentativas, maxTentativas = 5;
 
 function jogarNovamente() {
   numeroSecreto = parseInt(Math.random() * 30 + 1);
-  console.log(numeroSecreto); // Para fins de depuração
+  console.log(numeroSecreto); 
   tentativas = 1;
-  chute = null; // Garante que o loop comece
+  chute = null; // loop
 
   while (chute != numeroSecreto && tentativas <= maxTentativas) {
     chute = prompt(`Tentativa ${tentativas}/${maxTentativas}: Escolha um número entre 1 e 30`);
     
     if (isNaN(chute) || chute === "" || chute < 1 || chute > 30) {
       alert("Entrada inválida. Insira um número entre 1 e 30.");
-      continue; // Volta para o início do loop
+      continue; 
     }
 
     if (chute == numeroSecreto) {
@@ -33,4 +33,4 @@ function jogarNovamente() {
   }
 }
 
-jogarNovamente(); // Inicia o jogo
+jogarNovamente(); // para iniciar o jogo
